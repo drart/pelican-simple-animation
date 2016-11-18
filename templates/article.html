@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{% if BLOGTITLE %}{{ BLOGTITLE}} - {% endif %}{{ article.title }}{% endblock %}
+
+{% block titletext %}
+<div id="sitename">{% if BLOGTITLE %}{{ BLOGTITLE }}{% else %}{{ SITETITLE }}{% endif %} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</div> 
+{% endblock %}
+
+{% block content %}        
+
+<header>
+    <h1>{{ article.title }}</h1>
+    {% if not HIDE_DATE %}
+    {#<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>#}
+    <div class="published" title="{{ article.date.isoformat() }}">Posted in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> on {{ article.locale_date }}</div>
+    {% endif %}
+</header>
+<article>
+    {{ article.content }}
+</article>
+
+    {% include 'disqus.html' %}
+
+
+    {#
+    <ul>
+        {% if article.prev_article %}
+        <li>
+        <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
+            {{ article.prev_article.title }}
+        </a>
+        </li>
+        {% endif %}
+        {% if article.next_article %}
+        <li>
+        <a href="{{ SITEURL }}/{{ article.next_article.url}}">
+            {{ article.next_article.title }}
+        </a>
+        </li>
+        {% endif %}
+    </ul>
+    <ul>
+    #}
+
+    {# Neighbor plugin stuff  #}
+    {% if article.prev_article or article.next_article %}
+    <hr style="margin:20px">
+    <p class="paginator">
+        {% if article.next_article %}
+            <a href="{{ SITEURL }}/{{ article.next_article.url }}">&larr;&nbsp;&nbsp;&nbsp;newer</a>
+            ::
+        {% endif %}
+        {% if article.prev_article %}
+        <a href="{{ SITEURL }}/{{ article.prev_article.url }}">older&nbsp;&nbsp;&nbsp;&rarr;</a>
+        {% endif %}
+    </p>
+    {% endif %}
+{% endblock %}

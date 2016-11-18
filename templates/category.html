@@ -1,0 +1,6 @@
+{% extends "index.html" %}
+{% block title %}{% if BLOGTITLE %}{{ BLOGTITLE }}{% else %}{{ SITETITLE }}{% endif %} - {{ category }}{% endblock %}
+
+{% block titletext %}
+<div id="sitename">{% if BLOGTITLE %}{{ BLOGTITLE }}{% else %}{{ SITETITLE }}{% endif %} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</div> 
+{% endblock %}
