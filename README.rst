@@ -25,3 +25,4 @@ TODO
 - base
 - blog (add the categories in the style)
 - toggle visibility of stuff
+- social icon text is broken
