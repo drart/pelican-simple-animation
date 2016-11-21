@@ -41,6 +41,13 @@
                     {% endfor %}
                     {% endif %}
 
+                    {% if WORKLINKS | length > 1 %}
+                    <!--li class="Label">{{ WORKTITLE }}</li-->
+                    {% for name, link in WORKLINKS %}
+                    <li><a href="{{ link }}">{{ name }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+
                     {% if categories | length > 0 %}
                     <li class="Label"><a href="{{ SITEURL }}/{{ BLOGDIR }}">{{ BLOGTITLE  }}</a>
                     <ul>
@@ -78,11 +85,16 @@
             function closeNav() {
                 document.getElementById("myNav").style.height = "0%";
             }
+            document.onkeyup = function(e){
+                if( e.keyCode === 27){
+                    document.getElementById("myNav").style.height = "0%";
+                }
+            };
             menumenu();
+
         </script>
         {% include 'analytics.html' %}
         {% block jsfoot %}
         {% endblock %}
-
 </body>
 </html>

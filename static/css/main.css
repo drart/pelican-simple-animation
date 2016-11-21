@@ -50,7 +50,7 @@ img { max-width: 100%; margin: 10px auto; display:block;}
 .overlay a {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 28px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -66,7 +66,7 @@ img { max-width: 100%; margin: 10px auto; display:block;}
 }
 @media screen and (max-height: 450px) {
     .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
+    .overlay a {font-size: 18px}
     .overlay .closebtn {
         font-size: 40px;
         top: 15px;
