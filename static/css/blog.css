@@ -1,5 +1,5 @@
-html{  background: linear-gradient(133deg, #ffabab, #91caff);
-    background-size: 400% 400%;
+html{  background: linear-gradient(133deg, #e0e0e0, #f6f6f6);
+    background-size: 200px 100px;
     animation: AnimationName 50s ease infinite; }
 @keyframes AnimationName {    
     0%{background-position:0% 50%}    

@@ -5,23 +5,23 @@
 <div id="sitename">{% if BLOGTITLE %}{{ BLOGTITLE }}{% else %}{{ SITETITLE }}{% endif %} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</div> 
 {% endblock %}
 
+{% block cssaddons %}
+<link rel="stylesheet" href="/theme/css/blog.css" type="text/css" />
+{% endblock %}
+
 {% block content %}        
 
 <header>
     <h1>{{ article.title }}</h1>
-    {% if not HIDE_DATE %}
-    {#<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>#}
-    <div class="published" title="{{ article.date.isoformat() }}">Posted in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> on {{ article.locale_date }}</div>
-    {% endif %}
 </header>
 <article>
     {{ article.content }}
 </article>
 
+    {#
     {% include 'disqus.html' %}
 
 
-    {#
     <ul>
         {% if article.prev_article %}
         <li>
@@ -41,6 +41,11 @@
     <ul>
     #}
 
+    {% if not HIDE_DATE %}
+    {#<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>#}
+    <div class="published" title="{{ article.date.isoformat() }}">Posted in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> on {{ article.locale_date }}</div>
+
+    {% endif %}
     {# Neighbor plugin stuff  #}
     {% if article.prev_article or article.next_article %}
     <hr style="margin:20px">

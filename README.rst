@@ -24,5 +24,4 @@ TODO
 - article
 - base
 - blog (add the categories in the style)
-- timeago without jquery?
 - toggle visibility of stuff

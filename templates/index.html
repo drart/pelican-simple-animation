@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block cssaddons %}
+<link rel="stylesheet" href="/theme/css/blog.css" type="text/css" />
+{% endblock %}
+
 {% block content_title %}{% endblock %}
 
 {% block titletext %}
@@ -7,7 +11,7 @@
 {% endblock %}
 
 {% block content %}        
-<canvas id="myCanvas"></canvas>
+<!--canvas id="myCanvas"></canvas-->
     {% for article in articles_page.object_list %}
             <h1 class="title">
                 <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
