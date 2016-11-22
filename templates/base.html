@@ -7,16 +7,16 @@
         {#<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />#}
         {# CSS #}
         <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
-        {# RSS #}
         {% block cssaddons %}
         {% endblock %}
+        {# RSS #}
         <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
         {% if FEED_RSS %}
         <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
         {% endif %}
+	 {# Javascript #}
         {% block jshead %}
         {% endblock %}
-        <script src="/theme/js/menu.js"> </script>
 </head>
 
 <body>
@@ -77,22 +77,7 @@
         </div>
         <footer> Powered by <a href="http://getpelican.com/">Pelican</a> </footer>
 
-        <script>
-            function openNav() {
-                document.getElementById("myNav").style.height = "100%";
-            }
-
-            function closeNav() {
-                document.getElementById("myNav").style.height = "0%";
-            }
-            document.onkeyup = function(e){
-                if( e.keyCode === 27){
-                    document.getElementById("myNav").style.height = "0%";
-                }
-            };
-            menumenu();
-
-        </script>
+        <script src="/theme/js/menu.js"> </script>
         {% include 'analytics.html' %}
         {% block jsfoot %}
         {% endblock %}
