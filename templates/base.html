@@ -49,10 +49,10 @@
                     {% endif %}
 
                     {% if categories | length > 0 %}
-                    <li class="Label"><a href="{{ SITEURL }}/{{ BLOGDIR }}">{{ BLOGTITLE  }}</a>
-                    <ul>
+                    <li id="blogtitle"><a href="{{ SITEURL }}/{{ BLOGDIR }}">{{ BLOGTITLE  }}</a>
+                    <ul id="menu-categories">
                         {% for category, articles in categories %}
-                        <li><a href="{{ SITEURL }}/{{category.url}}">{{ category }}</a>
+                        <li class="menu-category"><a href="{{ SITEURL }}/{{category.url}}">{{ category }}</a>
                         <ul>
                             {% for article in articles  %}
                             <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>

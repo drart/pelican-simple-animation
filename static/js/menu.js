@@ -1,36 +1,25 @@
 var menumenu = function(){ 
 
-    var menuitems = [];
-    var categories = [];
+    var menuitems = document.querySelectorAll('#menumenu > li:not(#blogtitle)');
 
-    var mymenu = document.getElementById("menumenu");
+    var bloglinks = document.querySelectorAll(".menu-category li");
+    for (var i = 0; i < bloglinks.length; i++){
+        bloglinks[i].hidden = true;
+    }
 
-    for(var i = 0; i < mymenu.children.length; i++){
-        menuitems.push(mymenu.children[i]);
+    document.getElementById("menu-categories").hidden = true;
 
-        // if this is a category then prevent link for now
-        if(menuitems[i].getElementsByTagName('ul').length > 0) {
+    document.getElementById('blogtitle').querySelector('a').onclick = function(e){
+        e.preventDefault();
+        e.stopPropagation();
 
-            //console.log(menuitems[i].firstChild);
-
-            menuitems[i].firstChild.onclick = function(e){
-                //console.log(e);
-                e.preventDefault();
-                e.stopPropagation();
-
-                for (var xx = 0 ; xx < menuitems.length-1; xx++){
-                   menuitems[xx].hidden = true; 
-                }
-                // reset the link 
-                this.onclick = function(e){};
-            };
-
-            // hide submenus
-            var xx = menuitems[i].getElementsByTagName('ul');
-            for (var j = 0 ; j < xx.length; j++){
-                xx[j].hidden = true; 
-            }
+        document.getElementById("menu-categories").hidden = false;
+                
+        for (var i = 0; i < menuitems.length; i++){
+            menuitems[i].hidden = true; 
         }
+
+        // reset the link 
+        this.onclick = function(e){};
     };
-    //console.log(menuitems.length);
 };

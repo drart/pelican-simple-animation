@@ -17,12 +17,13 @@ Additional setting used by this theme, if present:
 TODO
 ~~~~
 
-- http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay2
-- https://github.com/codrops/MultiLevelPushMenu
-- CSS
-- Blog CSS
-- article
-- base
-- blog (add the categories in the style)
-- toggle visibility of stuff
-- social icon text is broken
+[x] http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay2
+[]  https://github.com/codrops/MultiLevelPushMenu
+[]  http://stackoverflow.com/questions/9280258/prevent-body-scrolling-but-allow-overlay-scrolling
+[x] CSS
+[x] Blog CSS
+[x] article
+[x] base
+[] blog (add the categories in the style)
+[] toggle visibility of stuff
+[] social icon text 
