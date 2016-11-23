@@ -18,8 +18,8 @@ TODO
 ~~~~
 
 [x] http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay2
-[]  https://github.com/codrops/MultiLevelPushMenu
-[]  http://stackoverflow.com/questions/9280258/prevent-body-scrolling-but-allow-overlay-scrolling
+[x]  https://github.com/codrops/MultiLevelPushMenu -- built my own... 
+[x]  http://stackoverflow.com/questions/9280258/prevent-body-scrolling-but-allow-overlay-scrolling -- easier than expected
 [x] CSS
 [x] Blog CSS
 [x] article
@@ -27,3 +27,5 @@ TODO
 [] blog (add the categories in the style)
 [] toggle visibility of stuff
 [] social icon text 
+[] http://www.voidynullness.net/blog/2015/06/25/add-recent-posts-list-to-pelican-blog/
+[] http://thisdavej.com/category/node-js/ -- I like the menu style on this blog
