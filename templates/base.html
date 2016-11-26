@@ -48,9 +48,28 @@
                     {% endfor %}
                     {% endif %}
 
+                    {# BLOG!!! #}
                     {% if categories | length > 0 %}
                     <li id="blogtitle"><a href="{{ SITEURL }}/{{ BLOGDIR }}">{{ BLOGTITLE  }}</a>
+
+                    {# List Blog categories and then individual posts #}
                     <ul id="menu-categories">
+
+                        {# Set RECNET_BLOG in peliconconf.py to true to add the 5 most recent links #}
+                        {% if RECENT_BLOG  %}
+                        <li class="menu-category"><a href="{{ SITEURL  }}/{{ BLOGDIR  }}">Recent Posts</a>
+                        {% set recent = articles if not all_articles else all_articles %}
+                        <ul class="menu-category" id="recent-posts">
+                        {% for a in recent %}
+                        {% if loop.index < 6 %}
+                            <li>
+                                <a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a>
+                            </li>
+                        {% endif %}
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+
                         {% for category, articles in categories %}
                         <li class="menu-category"><a href="{{ SITEURL }}/{{category.url}}">{{ category }}</a>
                         <ul>
