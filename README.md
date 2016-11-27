@@ -12,6 +12,7 @@ Additional setting used by this theme, if present:
 
 ## TODO
 
+- [x] issue with openNav is not defined on slow connections
 - [x] http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay2
 - [x]  https://github.com/codrops/MultiLevelPushMenu -- built my own... 
 - [x]  http://stackoverflow.com/questions/9280258/prevent-body-scrolling-but-allow-overlay-scrolling 
@@ -19,7 +20,7 @@ Additional setting used by this theme, if present:
 - [x] Blog CSS
 - [x] article
 - [x] base
-- [] blog (add the categories in the style)
+- [x] blog (add the categories in the style)
 - [x] social icon text 
-- [] http://www.voidynullness.net/blog/2015/06/25/add-recent-posts-list-to-pelican-blog/
+- [x] http://www.voidynullness.net/blog/2015/06/25/add-recent-posts-list-to-pelican-blog/
 - [] http://thisdavej.com/category/node-js/ -- I like the menu style on this blog
