@@ -44,13 +44,23 @@ img { max-width: 100%; margin: 10px auto; display:block;}
     text-align: center;
     margin-top: 30px;
 }
-.overlay  a {
+.overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 28px;
     color: #818181;
     display: block;
     transition: 0.3s;
+}
+.overlay .label {
+    color: #eee;
+}
+.overlay ul{
+    list-style-type: none;
+}
+.overlay hr{
+    width: 50%;
+    border-top: 4px dotted #aaa;
 }
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;

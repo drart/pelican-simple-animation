@@ -26,32 +26,36 @@
        <div id="myNav" class="overlay">
            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
            <div class="overlay-content">
-
+                
                 <ul id="menumenu">
                     {% if MENUITEMS %}
                     {% for name, link in MENUITEMS %}
                     <li><a href="{{ SITEURL }}/{{ link }}">{{ name }}</a></li>
                     {% endfor %}
+                    <hr>
                     {% endif %}
 
                     {% if DISPLAY_PAGES_ON_MENU %}
+                    <li>PAGES</li>
                     {% for page in PAGES %}
                     <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                     {#{% if not loop.last %} ::{% endif %}#}
                     {% endfor %}
+                    <hr>
                     {% endif %}
 
                     {% if WORKLINKS | length > 1 %}
-                    <!--li class="Label">{{ WORKTITLE }}</li-->
+                    <li class="label">{{ WORKTITLE }}</li>
                     {% for name, link in WORKLINKS %}
                     <li><a href="{{ link }}">{{ name }}</a></li>
                     {% endfor %}
+                    <hr>
                     {% endif %}
 
                     {# BLOG!!! #}
                     {% if categories | length > 0 %}
                     <li id="blogtitle"><a href="{{ SITEURL }}/{{ BLOGDIR }}">{{ BLOGTITLE  }}</a>
-
+                    <hr>
                     {# List Blog categories and then individual posts #}
                     <ul id="menu-categories">
 
